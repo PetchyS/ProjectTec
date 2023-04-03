@@ -4,8 +4,6 @@ import { UsergroupAddOutlined } from '@ant-design/icons';
 import { Select, Space ,Table, Tag} from 'antd';
 import { Button, Checkbox, Form, Input } from 'antd';
 
-
-
 const levelData = ['กรุณาเลือก','ปริญญาตรี2ปีหลังปกติ','ปริญญาตรี2ปีหลังกศพ','ปริญญาตรี4ปีปกติ','ปริญญาตรี4ปีกศพ'];
 const areaData = {
   กรุณาเลือก:['...'],

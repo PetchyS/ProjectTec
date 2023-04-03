@@ -1,6 +1,7 @@
 import { Badge, Calendar, Modal } from 'antd';
 import InputEventBranch from './InputEventBranch';
 import React, { useRef, useState } from 'react';
+import SEcalendar from './showEventCalendar';
 
 const getListData = (value) => {
   let listData;
@@ -54,7 +55,7 @@ const getMonthData = (value) => {
     return 1394;
   }
 };
-const App1 = () => {
+const CalendarStudent = () => {
   const monthCellRender = (value) => {
     const num = getMonthData(value);
     return num ? (
@@ -115,11 +116,11 @@ const App1 = () => {
             // </button>
           ]}
         >
-          <InputEventBranch />
+          <SEcalendar/>
         </Modal>
       </ul>
     );
   };
   return <Calendar dateCellRender={dateCellRender} monthCellRender={monthCellRender} />;
 };
-export default App1;
+export default CalendarStudent;
