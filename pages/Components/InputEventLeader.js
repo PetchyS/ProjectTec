@@ -232,6 +232,7 @@ export default function InputEventLeader() {
                         <Card>
                             <label>จำนวน Token</label>
                             <Form.Item
+                                name="token"
                                 rules={[
                                     {
                                         required: true,
