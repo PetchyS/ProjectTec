@@ -65,7 +65,7 @@ const CalendarStudent = () => {
       </div>
     ) : null;
   };
-  const dateCellRender = (value) => {
+  const DateCellRender = (value) => {
     const listData = getListData(value);
     const [setIsModaladd, setIsAddOpen] = useState(false);
     const [setIsList, setIsListOpen] = useState(false);
@@ -121,6 +121,6 @@ const CalendarStudent = () => {
       </ul>
     );
   };
-  return <Calendar dateCellRender={dateCellRender} monthCellRender={monthCellRender} />;
+  return <Calendar dateCellRender={DateCellRender} monthCellRender={monthCellRender} />;
 };
 export default CalendarStudent;

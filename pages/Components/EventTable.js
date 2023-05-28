@@ -1,5 +1,5 @@
 import React from "react";
-import { Table} from "antd";
+import { Form, Table} from "antd";
 import {BulbOutlined } from '@ant-design/icons';
 import { Modal } from 'antd';
 import { useState } from 'react';
@@ -119,11 +119,11 @@ export default function EventTable() {
         <div>
             <Eventcolumn tokenOk={tokenOk} tokenShow={tokenShow} eventShow={eventShow}/>
             <Modal
-                title={[<BulbOutlined />, ' กรอกโทเคนคีย์ให้ถูกต้อง']}
+                title={[<BulbOutlined key={Form}/>, ' กรอกโทเคนคีย์ให้ถูกต้อง']}
                 open={isModalOpen}
                 onCancel={tokenCancel}
                 footer={[
-                    <button type="button" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" onClick={tokenCancel}>
+                    <button key={Form} type="button" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" onClick={tokenCancel}>
                         Cancel
                     </button>,
                 ]}>
@@ -131,10 +131,10 @@ export default function EventTable() {
                 {indexValue[selectedTokenIndex] ? <SimpleForm /> : <Form2 />}
             </Modal>
             <Modal
-                title={[<BulbOutlined />, 'ข้อมูลกิจกรรม']}
+                title={[<BulbOutlined key={Detail} />, 'ข้อมูลกิจกรรม']}
                 open={isEventOpen} onCancel={eventCancel}
                 footer={[
-                    <button type="button" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" onClick={eventCancel}>
+                    <button key={Detail} type="button" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" onClick={eventCancel}>
                         Cancel
                     </button>,
                 ]}>

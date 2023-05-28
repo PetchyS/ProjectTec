@@ -7,7 +7,7 @@ import Highlighter from 'react-highlight-words';
 import InputEventLeader from '../Components/InputEventLeader';
 import ComplexNavbar from '../Components/newNav'
 
-export default function Example() {
+export default function Example2() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [setIsModalCalendar, setIsCalendarOpen] = useState(false);
     const [setIsModaladd, setIsAddOpen] = useState(false);
@@ -460,6 +460,7 @@ export default function Example() {
                 onCancel={onCancel}
                 footer={[
                     <button
+                        key={InputEventLeader}
                         type="primary"
                         onClick={onCancel}
                         className="text-white bg-green-600 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-8 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-800 dark:focus:ring-red-900"
@@ -494,6 +495,7 @@ export default function Example() {
                 onCancel={cancelAdd}
                 footer={[
                     <button
+                        key={InputEventLeader}
                         type="primary"
                         onClick={cancelAdd}
                         className="text-white bg-green-600 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-8 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"

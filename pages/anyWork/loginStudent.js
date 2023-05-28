@@ -49,7 +49,7 @@ export default function login() {
                             </div>
                         </div>
                         <div className='flex w-full justify-center'>
-                            <a href="/register" className="font-medium text-indigo-600 opacity-80 hover:text-indigo-500">
+                            <a href="../student/registerAll/register" className="font-medium text-indigo-600 opacity-80 hover:text-indigo-500">
                                 ลงทะเบียนใช้งาน
                             </a>
                         </div>
