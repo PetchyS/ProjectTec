@@ -472,9 +472,7 @@ export default function InputEvent() {
                     </div>
                 </div>
 
-                {/* date Start: 25/04/2566
-                    name: petch samat 
-                    last Edit:05/05/2566 */}
+               
             </card></Form>
     )
 }

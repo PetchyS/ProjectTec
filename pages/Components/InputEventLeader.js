@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState , useEffect } from 'react'
 import { Button, Checkbox, Form, Input, Radio, Card, Select, } from 'antd';
 import listdata from './listbranch';
 
@@ -13,8 +13,22 @@ const areaData = {
         'อุตสาหกรรมศิลป์']
 };
 export default function InputEventLeader() {
+    
     const [areas, setAreas] = useState(areaData[levelData[0]]);
     const [secondAreas, setSecondAreas] = useState(areaData[levelData[0]][0]);
+    const [departData, setAepartData] = useState(null);
+    
+    useEffect(() => {
+        axios.get('http://api-dev-cwie.idmis.lru.ac.th//branch/allBranch')
+          .then(response => {
+            const data = response.data;
+            setAepartData(data);
+          })
+          .catch(error => {
+            console.error(error);
+          });
+      }, []);
+    
     const handleLevelChange = (value) => {
         setAreas(areaData[value]);
         setSecondAreas(areaData[value]);
@@ -99,9 +113,9 @@ export default function InputEventLeader() {
                             placeholder="กรุณาเลือกสาขา"
                             value={secondAreas}
                             onChange={onSecondAreasChange}
-                            options={areas.map((area) => ({
-                              label: area,
-                              value: area,
+                            options={departData.map((depart) => ({
+                              label: depart.branch_name,
+                              value: depart.branch_name,
                             }))}
                              id="courseEvent" className="bg-gray-50 mt-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                             </Select>
