@@ -6,21 +6,212 @@ import App1 from '../Components/showCalendar';
 import { SearchOutlined } from '@ant-design/icons';
 import Highlighter from 'react-highlight-words';
 import ComplexNavbar from '../Components/newNav'
+import Link from 'next/link';
 
-export default function Example1() {
+export default function Example() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [setIsModalCalendar, setIsCalendarOpen] = useState(false);
   const [setIsModaladd, setIsAddOpen] = useState(false);
   const data = [
     {
       key: '1',
-      id_event: "----------",
-      name_event: 'ธรรมะฮีลใจ',
-      houre_event: 3,
-      human: 50,
-      tags: ['สาขา', 'อุตสาหกรรมศิลป์'],
+      factors: "1.1 ความมีชื่อเสียงของมหาวิทยาลัยและเป็นที่ยอมรับของสังคม",
+      the_most: 6,
+      lots: 2,
+      middle: 1,
+      little: 1,
+      minimal: 0,
     },
-    
+    {
+      key: '2',
+      factors: "1.2 เป็นมหาวิทยาลัยที่จบออกมาแล้วเป็นที่ยอมรับในตลาดแรงงาน",
+      the_most: 4,
+      lots: 2,
+      middle: 1,
+      little: 3,
+      minimal: 0,
+    },
+    {
+      key: '3',
+      factors: "1.3 เป็นมหาวิทยาลัยที่มีความทันสมัยและมีความพร้อมในทุกด้าน",
+      the_most: 6,
+      lots: 1,
+      middle: 3,
+      little: 0,
+      minimal: 0,
+    },
+    {
+      key: '4',
+      factors: "1.4 สถานที่ตั้งของมหาวิทยาลัยเดินทางมาเล่าเรียนสะดวกสบาย",
+      the_most: 2,
+      lots: 2,
+      middle: 1,
+      little: 2,
+      minimal: 3,
+    },
+    {
+      key: '5',
+      factors: "1.5 นักเรียนมีความปรารถนาที่จะเรียนสาขาที่เลือกในมหาวิทยาลัยนี้ เพราะพ่อ แม่ และผู้ปกครองจบจากมหาวิทยาลัยนี้ หรือ เพื่อนๆ ชักชวน",
+      the_most: 1,
+      lots: 8,
+      middle: 0,
+      little: 0,
+      minimal: 1,
+    },
+    {
+      key: '6',
+      factors: "2.1 ค่าธรรมเนียมการศึกษา เช่น ค่าหน่วยกิตและค่าลงทะเบียน มีราคาเหมาะสม",
+      the_most: 4,
+      lots: 1,
+      middle: 1,
+      little: 0,
+      minimal: 4,
+    },
+    {
+      key: '7',
+      factors: "2.2 ทุนการศึกษามีผลต่อการตัดสินใจในการเลือกเรียน",
+      the_most: 2,
+      lots: 1,
+      middle: 4,
+      little: 3,
+      minimal: 0,
+    },
+    {
+      key: '8',
+      factors: "2.3 ค่าครองชีพเพียงพอจากผู้ปกครองหรือแหล่งทุน",
+      the_most: 4,
+      lots: 2,
+      middle: 1,
+      little: 2,
+      minimal: 1,
+    },
+    {
+      key: '9',
+      factors: "2.4 ค่าอาหารจากโรงอาหารหรือร้านค้าอื่นๆในมหาวิทยาลัย",
+      the_most: 1,
+      lots: 2,
+      middle: 7,
+      little: 0,
+      minimal: 0,
+    },
+    {
+      key: '10',
+      factors: "3.1 หลักสูตรที่เปิดสอนเป็นที่นิยม และเป็นที่ต้องการของตลาดแรงงาน ในปัจจุบัน",
+      the_most: 7,
+      lots: 1,
+      middle: 1,
+      little: 1,
+      minimal: 0,
+    },
+    {
+      key: '11',
+      factors: "3.2 คณาจารย์ประจำหลักสูตรได้รับการยอมรับจากภายนอก",
+      the_most: 4,
+      lots: 4,
+      middle: 1,
+      little: 1,
+      minimal: 0,
+    },
+    {
+        key: '12',
+        factors: "3.3 มีห้องเรียนที่ได้มาตรฐานและบรรยากาศดี",
+        the_most: 10,
+        lots: 0,
+        middle: 0,
+        little: 0,
+        minimal: 0,
+      },
+      {
+        key: '13',
+        factors: "3.4 ทักษะ ความรู้ และความสามารถที่นักศึกษาเป็นที่ยอมรับ",
+        the_most: 1,
+        lots: 9,
+        middle: 0,
+        little: 0,
+        minimal: 0,
+      },
+      {
+        key: '14',
+        factors: "3.5 มีความคาดหวังในโอกาสและอาชีพที่รองรับหลังสำเร็จการศึกษา",
+        the_most: 3,
+        lots: 3,
+        middle: 3,
+        little: 1,
+        minimal: 0,
+      },
+      {
+        key: '15',
+        factors: "4.1 รายได้ของครอบครัวเพียงพอต่อการเรียนตลอดหลักสูตร",
+        the_most: 8,
+        lots: 2,
+        middle: 0,
+        little: 0,
+        minimal: 0,
+      },
+      {
+        key: '16',
+        factors: "4.2 ครอบครัวสนับสนุนทุกๆด้านของการเข้าศึกษาต่อ",
+        the_most: 1,
+        lots: 2,
+        middle: 3,
+        little: 4,
+        minimal: 0,
+      },
+      {
+        key: '17',
+        factors: "4.3 ทุนการศึกษา หรือ สิทธิประโยชน์ ที่คาดว่าจะได้รับ",
+        the_most: 2,
+        lots: 8,
+        middle: 0,
+        little: 0,
+        minimal: 0,
+      },
+      {
+        key: '18',
+        factors: "5.1 	ความเห็นของเพื่อนในการแนะนำศึกษาต่อ",
+        the_most: 0,
+        lots: 10,
+        middle: 0,
+        little: 0,
+        minimal: 0,
+      },
+      {
+        key: '19',
+        factors: "5.2 ความเห็นของคนรักในการแนะนำศึกษาต่อ",
+        the_most: 0,
+        lots: 0,
+        middle: 5,
+        little: 5,
+        minimal: 0,
+      },
+      {
+        key: '20',
+        factors: "5.3 ความเห็นของคุณครูในการแนะนำศึกษาต่อ",
+        the_most: 5,
+        lots: 4,
+        middle: 0,
+        little: 1,
+        minimal: 0,
+      },
+      {
+        key: '21',
+        factors: "5.4 ความเห็นของครอบครัวในการแนะนำศึกษาต่อ",
+        the_most: 7,
+        lots: 3,
+        middle: 0,
+        little: 0,
+        minimal: 0,
+      },
+      {
+        key: '22',
+        factors: "5.5 ความเห็นของมหาวิทยาลัยในการแนะนำศึกษาต่อ",
+        the_most: 2,
+        lots: 4,
+        middle: 1,
+        little: 3,
+        minimal: 0,
+      },
+
 
   ];
   const App = () => {
@@ -133,65 +324,40 @@ export default function Example1() {
     });
     const columns = [
       {
-        title: 'รหัสกิจกรรม',
-        dataIndex: 'id_event',
-        key: 'id_event',
-        length: 10,
-        ...getColumnSearchProps('id_event'),
-        responsive: ['xs', 'sm', 'xl']
+        title: 'ปัจจัยผลต่อการตัดสินใจเข้าศีกษาต่อ',
+        dataIndex: 'factors',
+        key: 'factors',
+        width: '50%',
+
       },
       {
-        title: 'ชื่อกิจกรรม',
-        dataIndex: 'name_event',
-        key: 'name_event',
-        ...getColumnSearchProps('name_event'),
-        responsive: ['xs', 'sm', 'xl', 'md']
-        // render: (text) => <a>{text}</a>,
+        title: 'มากที่สุด',
+        dataIndex: 'the_most',
+        key: 'the_most',
+
       },
       {
-        title: 'ชั่วโมงกิจกรรม',
-        dataIndex: 'houre_event',
-        key: 'houre_event',
-        responsive: ['md']
+        title: 'มาก',
+        dataIndex: 'lots',
+        key: 'lots',
+
       },
       {
-        title: 'จำนวนที่รับ',
-        dataIndex: 'human',
-        key: 'human',
-        responsive: ['md']
+        title: 'ปานกลาง',
+        dataIndex: 'middle',
+        key: 'middle',
+
       },
       {
-        title: 'ระดับกิจกรรม',
-        key: 'tags',
-        dataIndex: 'tags',
-        render: (_, { tags }) => (
-          <>
-            {tags.map((tag) => {
-              let color = tag.length > 5 ? 'geekblue' : 'green';
-              if (tag === 'คณะ') {
-                color = 'volcano';
-              }
-              return (
-                <Tag color={color} key={tag}>
-                  {tag.toUpperCase()}
-                </Tag>
-              );
-            })}
-          </>
-        ),
-        responsive: ['md']
+        title: 'น้อย',
+        key: 'little',
+        dataIndex: 'little',
+
       },
       {
-        title: 'ตรวจสอบกิจกรรม',
-        key: 'action',
-        render: (_, record) => (
-          <Space size="middle">
-            <Button className={'hover:translate-1 hover:scale-110 duration-300 border-amber-300 text-amber-400 hover:bg-amber-300 hover:text-white'} onClick={showModal} type='button'>
-              ตรวจสอบ/แก้ไข
-            </Button>
-          </Space>
-        ),
-        responsive: ['xs', 'sm', 'xl']
+        title: 'น้อยที่สุด',
+        key: 'minimal',
+        dataIndex: 'minimal',
       },
     ];
 
@@ -203,6 +369,8 @@ export default function Example1() {
       }}
     />
   };
+  
+  
   const showCalendar = () => {
     setIsCalendarOpen(true);
   };
@@ -253,32 +421,7 @@ export default function Example1() {
               <p className="lg:text-4xl text-xl tracking-widest sm:text-left lg:mt-12 my-5 sm:my-auto text-center lg:text-start text-green-700 sm:text-4xl"><span className='text-red-500'>Faculty</span>&nbsp;of&nbsp;Industrial&nbsp;Technology</p>
             </div>
 
-            <dl className="grid lg:gap-40 lg:gap-x-96 lg:ml-14 gap-y-2 grid-cols-2 lg:pt-2">
-            <div className="lg:ml-24 ">
-                <button type="button" onClick={showAdd} className="transition ease-in-out delay-150 hover:text-white text-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 shadow-lg shadow-blue-300/50 bg-white font-medium rounded-full text-lg px-7 py-7 ml-5 sm:ml-20 md:ml-52 mb-2 lg:w-auto ">
-                  <svg className='w-12 h-12' fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M6 3a3 3 0 00-3 3v2.25a3 3 0 003 3h2.25a3 3 0 003-3V6a3 3 0 00-3-3H6zM15.75 3a3 3 0 00-3 3v2.25a3 3 0 003 3H18a3 3 0 003-3V6a3 3 0 00-3-3h-2.25zM6 12.75a3 3 0 00-3 3V18a3 3 0 003 3h2.25a3 3 0 003-3v-2.25a3 3 0 00-3-3H6zM17.625 13.5a.75.75 0 00-1.5 0v2.625H13.5a.75.75 0 000 1.5h2.625v2.625a.75.75 0 001.5 0v-2.625h2.625a.75.75 0 000-1.5h-2.625V13.5z"></path>
-                  </svg>
-                </button>
-              <div className='ml-2 sm:ml-16 md:ml-48 lg:ml-48 w-32'>
-                <div className='title flex justify-center text-md'> Add&nbsp;Event</div>
-                <p className='flex justify-center opacity-80 text-sm'> เพิ่มกิจกรรม</p>
-              </div>
-            </div>
-
-            <div className="lg:ml-20">
-                <button onClick={showCalendar} type="button" className="transition ease-in-out delay-150 hover:text-white text-red-500 hover:-translate-y-1 hover:scale-110 hover:bg-red-600 duration-300 shadow-lg shadow-red-300/50 gb-white font-medium rounded-full text-lg px-7 py-7 ml-7 mb-2">
-                  <svg className=' w-12 h-12' fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M12.75 12.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM7.5 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM8.25 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM9.75 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM10.5 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM12.75 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM14.25 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM15 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM16.5 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM15 12.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM16.5 13.5a.75.75 0 100-1.5.75.75 0 000 1.5z"></path>
-                    <path clipRule="evenodd" fillRule="evenodd" d="M6.75 2.25A.75.75 0 017.5 3v1.5h9V3A.75.75 0 0118 3v1.5h.75a3 3 0 013 3v11.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V7.5a3 3 0 013-3H6V3a.75.75 0 01.75-.75zm13.5 9a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5z"></path>
-                  </svg>
-                </button>
-              <div className=' mr-60 w-40'>
-                <div className='title flex justify-center text-md'>Calendar</div>
-                <p className='flex text-sm justify-center opacity-80'>ดูรายละเอียดกิจกรรม</p>
-              </div>
-            </div>
-            </dl>
+           
           </dl>
 
         </div>
@@ -287,13 +430,12 @@ export default function Example1() {
           layout="inline" className='gap-x-1 text-center align-middle'
         >
           <div className='w-1/8 mt-2'>
-            <p>ระดับกิจกรรม : &nbsp;</p>
+            <p>สาขาวิชา : &nbsp;</p>
           </div>
           <div className=' lg:w-1/3 w-full '>
             <Form.Item >
-              <select id="subject" className="bg-white border tracking-wider border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-slate-400 focus:border-blue-100 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              <select id="subject" class="bg-white border tracking-wider border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-slate-400 focus:border-blue-100 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 <option value="">ทั้งหมด</option>
-                <option value="">คณะ</option>
                 <option value="">สาขาทั้งหมด</option>
                 <option value="">วิศวกรรมไฟฟ้าและอิเล็กทรอนิกส์</option>
                 <option value="">วิศวกรรมการออกแบบและผลิต</option>
@@ -308,7 +450,7 @@ export default function Example1() {
           </div>
           <div className='w-full lg:w-1/6 '>
             <Form.Item>
-              <select id="YearS" className="bg-white border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-slate-400 focus:border-blue-100  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              <select id="YearS" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-slate-400 focus:border-blue-100  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 <option value="">ทั้งหมด</option>
                 <option value="">2566</option>
                 <option value="">2565</option>
@@ -320,7 +462,7 @@ export default function Example1() {
           </div>
           <div className='w-full lg:w-1/6'>
             <Form.Item>
-              <select id="Path" className="bg-white border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-slate-400 focus:border-blue-100 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              <select id="Path" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-slate-400 focus:border-blue-100 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 <option value="">ทั้งหมด</option>
                 <option value="">ภาคเรียนที่ 1</option>
                 <option value="">ภาคเรียนที่ 2</option>
@@ -328,67 +470,15 @@ export default function Example1() {
             </Form.Item>
           </div>
           <div className='w-full text-end lg:items-center my-5 lg:my-0 lg:w-1/12'>
-            <button type="button" className="hover:translate-1 hover:scale-110 duration-300 text-rose-600 hover:bg-rose-700 shadow bg-orange-50 hover:text-white font-medium rounded-lg text-sm px-9 py-2.5 text-center inline-flex items-center mr-2">
-              <svg style={{ height: "15" }} fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path clipRule="evenodd" fillRule="evenodd" d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z"></path></svg>
-              &nbsp;&nbsp;ค้นหา
+          <Link className='' href="DashboardT">
+            <button type="button" class="hover:translate-1 hover:scale-110 duration-300 text-rose-600 hover:bg-rose-700 shadow bg-orange-50 hover:text-white font-medium rounded-lg text-sm px-9 py-2.5 text-center inline-flex items-center mr-2">
+              &nbsp;&nbsp;Dashboard
             </button>
+          </Link>
           </div></Form>
         <Card className='w-full border-gray-100 border-2 mt-0 lg:mt-5'><App /></Card>
       </div>
-      <Modal
-        width={'80%'}
-        title="แก้ไขกิจกรรม"
-        open={isModalOpen}
-        onCancel={onCancel}
-        footer={[
-          <button
-            key={InputEventBranch}
-            type="primary"
-            onClick={onCancel}
-            className="text-white bg-green-600 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-8 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-800 dark:focus:ring-red-900"
-          >
-            ยืนยัน / สร้างToken
-          </button>
-        ]}
-      >
-        <InputEventBranch />
-      </Modal>
-      <Modal className='mt-0 h-80'
-        width={'80%'}
-        title="ปฏิทินกิจกรรม"
-        open={setIsModalCalendar}
-        onCancel={cancelCalendar}
-        footer={[
-          // <button
-          //     type="primary"
-          //     onClick={cancenCalendar}
-          //     className="text-white bg-green-600 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-8 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
-          // >
-          //     ยืนยัน / สร้างToken
-          // </button>
-        ]}
-      >
-        <App1 />
-      </Modal>
-      <Modal
-        width={'80%'}
-        title="เพิ่มกิจกรรม"
-        open={setIsModaladd}
-        onCancel={cancelAdd}
-        footer={[
-          <button
-            key={InputEventBranch}
-            type="primary"
-            onClick={cancelAdd}
-            className="text-white bg-green-600 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-8 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
-          >
-            เพิ่มกิจกรรม
-          </button>
-        ]}
-      >
-        <InputEventBranch />
-      </Modal>
+      
     </div>
 
   )

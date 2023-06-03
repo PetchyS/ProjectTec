@@ -12,8 +12,8 @@ export default function login() {
                         <h2 className="mt-6 text-center text-3xl font-extralight tracking-tight text-gray-900">
                             Log in <span className='text-red-700'>( for student )</span>
                         </h2>
-                        <p style={{ fontSize:20 }} class="text-center mt-5 text-slate-500 font-extralight relative">ระบบเตรียมฝึกประสปการณ์</p>   
-                        <p style={{ fontSize:12 }} class="text-center text-slate-500 font-extralight relative">คณะเทคโนโลยีอุตสหกรรม มหาวิทยาลัยราชภัฎเลย</p>   
+                        <p style={{ fontSize:20 }} className="text-center mt-5 text-slate-500 font-extralight relative">ระบบเตรียมฝึกประสปการณ์</p>   
+                        <p style={{ fontSize:12 }} className="text-center text-slate-500 font-extralight relative">คณะเทคโนโลยีอุตสหกรรม มหาวิทยาลัยราชภัฎเลย</p>   
 
                     </div>
                     <form className="mt-8 space-y-6" action="#" method="POST">
@@ -49,7 +49,7 @@ export default function login() {
                             </div>
                         </div>
                         <div className='flex w-full justify-center'>
-                            <a href="/register" className="font-medium text-indigo-600 opacity-80 hover:text-indigo-500">
+                            <a href="../student/registerAll/register" className="font-medium text-indigo-600 opacity-80 hover:text-indigo-500">
                                 ลงทะเบียนใช้งาน
                             </a>
                         </div>

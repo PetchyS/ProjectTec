@@ -1,26 +1,108 @@
 import React, { useRef, useState } from 'react';
 import { Form, Col, Row, Space, Table, Tag, Button, Modal, StyleSheet, Card, Input } from 'antd'
 import { UsergroupAddOutlined } from '@ant-design/icons';
-import InputEventBranch from '../Components/InputEventBranch';
+import InputEvent from '../student/formstudent';
 import App1 from '../Components/showCalendar';
 import { SearchOutlined } from '@ant-design/icons';
 import Highlighter from 'react-highlight-words';
 import ComplexNavbar from '../Components/newNav'
+import Link from 'next/link';
+import InputEventBranch from '../Components/InputEventBranch';
 
-export default function Example1() {
+export default function Example() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [setIsModalCalendar, setIsCalendarOpen] = useState(false);
   const [setIsModaladd, setIsAddOpen] = useState(false);
   const data = [
     {
       key: '1',
-      id_event: "----------",
-      name_event: 'ธรรมะฮีลใจ',
-      houre_event: 3,
-      human: 50,
-      tags: ['สาขา', 'อุตสาหกรรมศิลป์'],
+      id_event: "1",
+      name_event: 'นายคมกฤษฎิ์ ก้อมมณี',
+      houre_event: 'โรงเรียนชัยภูมิภักดีชุมพล',
+      human: 'ชัยภูมิ',
+      tags: 'ในเมือง',
     },
-    
+    {
+      key: '2',
+      id_event: "2",
+      name_event: 'นายวินิตร เห็มวิจิตร',
+      houre_event: 'โรงเรียนมหาไถ่ศึกษาเลย',
+      human: 'เลย',
+      tags: ['ในเมือง']
+    },
+    {
+      key: '3',
+      id_event: "3",
+      name_event: 'นางสาวปลายฟ้า ก้อมมณี',
+      houre_event: 'โรงเรียนเลยพิทยา',
+      human: 'เลย',
+      tags: ['ในเมือง']
+    },
+    {
+      key: '4',
+      id_event: "4",
+      name_event: 'นายมานะ บรรจงจิตร',
+      houre_event: 'โรงเรียนชัยภูมิภักดีชุมพล',
+      human: 'ชัยภูมิ',
+      tags: 'ในเมือง',
+    },
+    {
+      key: '5',
+      id_event: "5",
+      name_event: 'นางสาวธิวานันท์ สงศรีแสน',
+      houre_event: 'โรงเรียนเลยพิทยา',
+      human: 'เลย',
+      tags: ['ในเมือง']
+    },
+    {
+      key: '6',
+      id_event: "6",
+      name_event: 'นายปกครอง บุญปลื้ม',
+      houre_event: 'โรงเรียนชัยภูมิภักดีชุมพล',
+      human: 'ชัยภูมิ',
+      tags: 'ในเมือง',
+    },
+    {
+      key: '7',
+      id_event: "7",
+      name_event: 'นางสาวจนิสตา ขันแก้ว',
+      houre_event: 'โรงเรียนมหาไถ่ศึกษาเลย',
+      human: 'เลย',
+      tags: ['ในเมือง']
+    },
+    {
+      key: '8',
+      id_event: "8",
+      name_event: 'นางสาวสุนิสา นครขวาง',
+      houre_event: 'โรงเรียนเลยพิทยา',
+      human: 'ชัยภูมิ',
+      tags: 'ในเมือง',
+    },
+    {
+      key: '9',
+      id_event: "9",
+      name_event: 'นายจิรายุทธ์ ตั้งจิตร์',
+      houre_event: 'โรงเรียนมหาไถ่ศึกษาเลย',
+      human: 'เลย',
+      tags: ['ในเมือง']
+    },
+    {
+      key: '10',
+      id_event: "10",
+      name_event: 'นายพัชรพล พรหมรักษา',
+      houre_event: 'โรงเรียนชัยภูมิภักดีชุมพล',
+      human: 'ชัยภูมิ',
+      tags: 'ในเมือง',
+    },
+    {
+      key: '11',
+      id_event: "11",
+      name_event: 'นายญัตติภูมิ พรมมี',
+      houre_event: 'โรงเรียนมหาไถ่ศึกษาเลย',
+      human: 'เลย',
+      tags: ['ในเมือง']
+    },
+
 
   ];
   const App = () => {
@@ -133,15 +215,15 @@ export default function Example1() {
     });
     const columns = [
       {
-        title: 'รหัสกิจกรรม',
+        title: 'ลำดับ',
         dataIndex: 'id_event',
         key: 'id_event',
-        length: 10,
+        width: '10%',
         ...getColumnSearchProps('id_event'),
         responsive: ['xs', 'sm', 'xl']
       },
       {
-        title: 'ชื่อกิจกรรม',
+        title: 'ชื่อ-นามสกุล',
         dataIndex: 'name_event',
         key: 'name_event',
         ...getColumnSearchProps('name_event'),
@@ -149,45 +231,34 @@ export default function Example1() {
         // render: (text) => <a>{text}</a>,
       },
       {
-        title: 'ชั่วโมงกิจกรรม',
+        title: 'โรงเรียน',
         dataIndex: 'houre_event',
         key: 'houre_event',
-        responsive: ['md']
+        ...getColumnSearchProps('houre_event'),
+        responsive: ['xs', 'sm', 'xl', 'md']
       },
       {
-        title: 'จำนวนที่รับ',
+        title: 'จังหวัด',
         dataIndex: 'human',
         key: 'human',
-        responsive: ['md']
+        ...getColumnSearchProps('human'),
+        responsive: ['xs', 'sm', 'xl', 'md']
       },
       {
-        title: 'ระดับกิจกรรม',
+        title: 'อำเภอ',
         key: 'tags',
         dataIndex: 'tags',
-        render: (_, { tags }) => (
-          <>
-            {tags.map((tag) => {
-              let color = tag.length > 5 ? 'geekblue' : 'green';
-              if (tag === 'คณะ') {
-                color = 'volcano';
-              }
-              return (
-                <Tag color={color} key={tag}>
-                  {tag.toUpperCase()}
-                </Tag>
-              );
-            })}
-          </>
-        ),
-        responsive: ['md']
+        ...getColumnSearchProps('tags'),
+        responsive: ['xs', 'sm', 'xl', 'md']
       },
       {
-        title: 'ตรวจสอบกิจกรรม',
+        title: 'ตรวจสอบ',
         key: 'action',
+        width: '10%',
         render: (_, record) => (
           <Space size="middle">
             <Button className={'hover:translate-1 hover:scale-110 duration-300 border-amber-300 text-amber-400 hover:bg-amber-300 hover:text-white'} onClick={showModal} type='button'>
-              ตรวจสอบ/แก้ไข
+              ตรวจสอบ
             </Button>
           </Space>
         ),
@@ -253,32 +324,7 @@ export default function Example1() {
               <p className="lg:text-4xl text-xl tracking-widest sm:text-left lg:mt-12 my-5 sm:my-auto text-center lg:text-start text-green-700 sm:text-4xl"><span className='text-red-500'>Faculty</span>&nbsp;of&nbsp;Industrial&nbsp;Technology</p>
             </div>
 
-            <dl className="grid lg:gap-40 lg:gap-x-96 lg:ml-14 gap-y-2 grid-cols-2 lg:pt-2">
-            <div className="lg:ml-24 ">
-                <button type="button" onClick={showAdd} className="transition ease-in-out delay-150 hover:text-white text-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 shadow-lg shadow-blue-300/50 bg-white font-medium rounded-full text-lg px-7 py-7 ml-5 sm:ml-20 md:ml-52 mb-2 lg:w-auto ">
-                  <svg className='w-12 h-12' fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M6 3a3 3 0 00-3 3v2.25a3 3 0 003 3h2.25a3 3 0 003-3V6a3 3 0 00-3-3H6zM15.75 3a3 3 0 00-3 3v2.25a3 3 0 003 3H18a3 3 0 003-3V6a3 3 0 00-3-3h-2.25zM6 12.75a3 3 0 00-3 3V18a3 3 0 003 3h2.25a3 3 0 003-3v-2.25a3 3 0 00-3-3H6zM17.625 13.5a.75.75 0 00-1.5 0v2.625H13.5a.75.75 0 000 1.5h2.625v2.625a.75.75 0 001.5 0v-2.625h2.625a.75.75 0 000-1.5h-2.625V13.5z"></path>
-                  </svg>
-                </button>
-              <div className='ml-2 sm:ml-16 md:ml-48 lg:ml-48 w-32'>
-                <div className='title flex justify-center text-md'> Add&nbsp;Event</div>
-                <p className='flex justify-center opacity-80 text-sm'> เพิ่มกิจกรรม</p>
-              </div>
-            </div>
-
-            <div className="lg:ml-20">
-                <button onClick={showCalendar} type="button" className="transition ease-in-out delay-150 hover:text-white text-red-500 hover:-translate-y-1 hover:scale-110 hover:bg-red-600 duration-300 shadow-lg shadow-red-300/50 gb-white font-medium rounded-full text-lg px-7 py-7 ml-7 mb-2">
-                  <svg className=' w-12 h-12' fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M12.75 12.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM7.5 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM8.25 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM9.75 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM10.5 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM12.75 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM14.25 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM15 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM16.5 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM15 12.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM16.5 13.5a.75.75 0 100-1.5.75.75 0 000 1.5z"></path>
-                    <path clipRule="evenodd" fillRule="evenodd" d="M6.75 2.25A.75.75 0 017.5 3v1.5h9V3A.75.75 0 0118 3v1.5h.75a3 3 0 013 3v11.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V7.5a3 3 0 013-3H6V3a.75.75 0 01.75-.75zm13.5 9a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5z"></path>
-                  </svg>
-                </button>
-              <div className=' mr-60 w-40'>
-                <div className='title flex justify-center text-md'>Calendar</div>
-                <p className='flex text-sm justify-center opacity-80'>ดูรายละเอียดกิจกรรม</p>
-              </div>
-            </div>
-            </dl>
+            
           </dl>
 
         </div>
@@ -287,13 +333,12 @@ export default function Example1() {
           layout="inline" className='gap-x-1 text-center align-middle'
         >
           <div className='w-1/8 mt-2'>
-            <p>ระดับกิจกรรม : &nbsp;</p>
+            <p>สาขาวิชา : &nbsp;</p>
           </div>
           <div className=' lg:w-1/3 w-full '>
             <Form.Item >
-              <select id="subject" className="bg-white border tracking-wider border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-slate-400 focus:border-blue-100 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              <select id="subject" class="bg-white border tracking-wider border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-slate-400 focus:border-blue-100 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 <option value="">ทั้งหมด</option>
-                <option value="">คณะ</option>
                 <option value="">สาขาทั้งหมด</option>
                 <option value="">วิศวกรรมไฟฟ้าและอิเล็กทรอนิกส์</option>
                 <option value="">วิศวกรรมการออกแบบและผลิต</option>
@@ -308,7 +353,7 @@ export default function Example1() {
           </div>
           <div className='w-full lg:w-1/6 '>
             <Form.Item>
-              <select id="YearS" className="bg-white border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-slate-400 focus:border-blue-100  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              <select id="YearS" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-slate-400 focus:border-blue-100  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 <option value="">ทั้งหมด</option>
                 <option value="">2566</option>
                 <option value="">2565</option>
@@ -320,7 +365,7 @@ export default function Example1() {
           </div>
           <div className='w-full lg:w-1/6'>
             <Form.Item>
-              <select id="Path" className="bg-white border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-slate-400 focus:border-blue-100 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              <select id="Path" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-slate-400 focus:border-blue-100 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 <option value="">ทั้งหมด</option>
                 <option value="">ภาคเรียนที่ 1</option>
                 <option value="">ภาคเรียนที่ 2</option>
@@ -328,68 +373,17 @@ export default function Example1() {
             </Form.Item>
           </div>
           <div className='w-full text-end lg:items-center my-5 lg:my-0 lg:w-1/12'>
-            <button type="button" className="hover:translate-1 hover:scale-110 duration-300 text-rose-600 hover:bg-rose-700 shadow bg-orange-50 hover:text-white font-medium rounded-lg text-sm px-9 py-2.5 text-center inline-flex items-center mr-2">
-              <svg style={{ height: "15" }} fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path clipRule="evenodd" fillRule="evenodd" d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z"></path></svg>
-              &nbsp;&nbsp;ค้นหา
+          <Link className='' href="Summary">
+            <button type="button" class="hover:translate-1 hover:scale-110 duration-300 text-rose-600 hover:bg-rose-700 shadow bg-orange-50 hover:text-white font-medium rounded-lg text-sm px-9 py-2.5 text-center inline-flex items-center mr-2">
+              &nbsp;&nbsp;Summary
             </button>
+          </Link>
           </div></Form>
         <Card className='w-full border-gray-100 border-2 mt-0 lg:mt-5'><App /></Card>
       </div>
-      <Modal
-        width={'80%'}
-        title="แก้ไขกิจกรรม"
-        open={isModalOpen}
-        onCancel={onCancel}
-        footer={[
-          <button
-            key={InputEventBranch}
-            type="primary"
-            onClick={onCancel}
-            className="text-white bg-green-600 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-8 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-800 dark:focus:ring-red-900"
-          >
-            ยืนยัน / สร้างToken
-          </button>
-        ]}
-      >
-        <InputEventBranch />
-      </Modal>
-      <Modal className='mt-0 h-80'
-        width={'80%'}
-        title="ปฏิทินกิจกรรม"
-        open={setIsModalCalendar}
-        onCancel={cancelCalendar}
-        footer={[
-          // <button
-          //     type="primary"
-          //     onClick={cancenCalendar}
-          //     className="text-white bg-green-600 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-8 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
-          // >
-          //     ยืนยัน / สร้างToken
-          // </button>
-        ]}
-      >
-        <App1 />
-      </Modal>
-      <Modal
-        width={'80%'}
-        title="เพิ่มกิจกรรม"
-        open={setIsModaladd}
-        onCancel={cancelAdd}
-        footer={[
-          <button
-            key={InputEventBranch}
-            type="primary"
-            onClick={cancelAdd}
-            className="text-white bg-green-600 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-8 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
-          >
-            เพิ่มกิจกรรม
-          </button>
-        ]}
-      >
-        <InputEventBranch />
-      </Modal>
+      
     </div>
+    
 
   )
 }

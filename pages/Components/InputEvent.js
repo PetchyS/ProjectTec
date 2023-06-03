@@ -12,7 +12,7 @@ export default function InputEvent() {
                     action='#'
                 >
                     <div className='w-full sm:w-2/4 mt-2'>
-                        <label for="nameEvent">ชื่อกิจกรรม</label>
+                        <label htmlFor="nameEvent">ชื่อกิจกรรม</label>
                         <Form.Item
                             name="nameEvent"
                             rules={[
@@ -26,7 +26,7 @@ export default function InputEvent() {
                         </Form.Item>
                     </div>
                     <div className='mt-2 w-full sm:w-1/4'>
-                        <label for="peopleEvent">จำนวนที่รับ</label>
+                        <label htmlFor="peopleEvent">จำนวนที่รับ</label>
                         <Form.Item
                             name="poepleEvent"
                             rules={[
@@ -40,7 +40,7 @@ export default function InputEvent() {
                         </Form.Item>
                     </div>
                     <div className='mt-2 w-full sm:w-1/4'>
-                        <label for="houreEvent">จำนวนชั่วโมง</label>
+                        <label htmlFor="houreEvent">จำนวนชั่วโมง</label>
                         <Form.Item
                             name="houreEvent"
                             rules={[
@@ -59,7 +59,7 @@ export default function InputEvent() {
                             name="levelEvent"
                             rules={[{ required: true, message: 'กรุณาเลือกระดับกิจกรรม' }]}
                         >
-                            <select id="levelEvent" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <select id="levelEvent" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 <option selected disabled>เลือกระดับกิจกรรม</option>
                                 <option value="facultyM">คณะ</option>
                                 <option value="branchM">สาขา</option>
@@ -72,7 +72,7 @@ export default function InputEvent() {
                             name="courseEvent"
                             rules={[{ required: true, message: 'กรุณาเลือกสาขา' }]}
                         >
-                            <select id="courseEvent" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <select id="courseEvent" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 <option value="วิศวกรรมไฟฟ้าและอิเล็กทรอนิกส์">วิศวกรรมไฟฟ้าและอิเล็กทรอนิกส์</option>
                                 <option value="วิศวกรรมการออกแบบและผลิต">วิศวกรรมการออกแบบและผลิต</option>
                                 <option value="วิศวกรรมการจัดการอุตสาหกรรม">วิศวกรรมการจัดการอุตสาหกรรม</option>
@@ -91,7 +91,7 @@ export default function InputEvent() {
                         </Form.Item>
                     </div>
                     <div className='w-full sm:w-3/4 mt-2'>
-                        <label for="placeEvent">สถานที่จัดกิจกรรม</label>
+                        <label htmlFor="placeEvent">สถานที่จัดกิจกรรม</label>
                         <Form.Item
                             name="placeEvent"
                             rules={[
@@ -105,7 +105,7 @@ export default function InputEvent() {
                         </Form.Item>
                     </div>
                     <div className='w-full sm:w-1/4 mt-2'>
-                        <label for="placeEvent">ภาคเรียนที่</label>
+                        <label htmlFor="placeEvent">ภาคเรียนที่</label>
                         <Form.Item
                             name="placeEvent"
                             rules={[
@@ -119,7 +119,7 @@ export default function InputEvent() {
                         </Form.Item>
                     </div>
                     <div className='mt-2 w-full sm:w-1/2'>
-                        <label for="startDEvent">วันที่เริ่มกิจกรรม</label>
+                        <label htmlFor="startDEvent">วันที่เริ่มกิจกรรม</label>
                         <Form.Item
                             name="startDEvent"
                             rules={[
@@ -133,7 +133,7 @@ export default function InputEvent() {
                         </Form.Item>
                     </div>
                     <div className='mt-2 w-full sm:w-1/2'>
-                        <label for="endDEvent">วันที่สิ้นสุดกิจกรรม</label>
+                        <label htmlFor="endDEvent">วันที่สิ้นสุดกิจกรรม</label>
                         <Form.Item
                             name="endDEvent"
                             rules={[
@@ -147,7 +147,7 @@ export default function InputEvent() {
                         </Form.Item>
                     </div>
                     <div className='mt-2 w-full sm:w-1/2'>
-                        <label for="startTEvent">เวลาเริ่มกิจกรรม</label>
+                        <label htmlFor="startTEvent">เวลาเริ่มกิจกรรม</label>
                         <Form.Item
                             name="startTEvent"
                             rules={[
@@ -161,7 +161,7 @@ export default function InputEvent() {
                         </Form.Item>
                     </div>
                     <div className='mt-2 w-full sm:w-1/2'>
-                        <label for="endTEvent">เวลาสิ้นสุดกิจกรรม</label>
+                        <label htmlFor="endTEvent">เวลาสิ้นสุดกิจกรรม</label>
                         <Form.Item
                             name="endTEvent"
                             rules={[
@@ -175,7 +175,7 @@ export default function InputEvent() {
                         </Form.Item>
                     </div>
                     <div className='mt-2 w-full sm:w-1/2'>
-                        <label for="endDToken">วันที่ปิดรับ token </label>
+                        <label htmlFor="endDToken">วันที่ปิดรับ token </label>
                         <Form.Item
                             name="endDToken"
                             rules={[
@@ -189,7 +189,7 @@ export default function InputEvent() {
                         </Form.Item>
                     </div>
                     <div className='mt-2 w-full sm:w-1/2'>
-                        <label for="endTToken">เวลาปิดรับ token </label>
+                        <label htmlFor="endTToken">เวลาปิดรับ token </label>
                         <Form.Item
                             name="endTToken"
                             rules={[

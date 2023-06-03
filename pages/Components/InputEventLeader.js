@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState , useEffect } from 'react'
 import { Button, Checkbox, Form, Input, Radio, Card, Select, } from 'antd';
 import listdata from './listbranch';
 
@@ -13,8 +13,22 @@ const areaData = {
         'อุตสาหกรรมศิลป์']
 };
 export default function InputEventLeader() {
+    
     const [areas, setAreas] = useState(areaData[levelData[0]]);
     const [secondAreas, setSecondAreas] = useState(areaData[levelData[0]][0]);
+    const [departData, setAepartData] = useState(null);
+    
+    useEffect(() => {
+        axios.get('http://api-dev-cwie.idmis.lru.ac.th//branch/allBranch')
+          .then(response => {
+            const data = response.data;
+            setAepartData(data);
+          })
+          .catch(error => {
+            console.error(error);
+          });
+      }, []);
+    
     const handleLevelChange = (value) => {
         setAreas(areaData[value]);
         setSecondAreas(areaData[value]);
@@ -32,7 +46,7 @@ export default function InputEventLeader() {
                     action='#'
                 >
                     <div className='w-full sm:w-2/4 mt-2'>
-                        <label for="nameEvent">ชื่อกิจกรรม</label>
+                        <label htmlFor="nameEvent">ชื่อกิจกรรม</label>
                         <Form.Item
                             name="nameEvent"
                             rules={[
@@ -46,7 +60,7 @@ export default function InputEventLeader() {
                         </Form.Item>
                     </div>
                     <div className='mt-2 w-full sm:w-1/4'>
-                        <label for="peopleEvent">จำนวนคนที่รับ</label>
+                        <label htmlFor="peopleEvent">จำนวนคนที่รับ</label>
                         <Form.Item
                             name="poepleEvent"
                             rules={[
@@ -60,7 +74,7 @@ export default function InputEventLeader() {
                         </Form.Item>
                     </div>
                     <div className='mt-2 w-full sm:w-1/4'>
-                        <label for="houreEvent">จำนวนชั่วโมง</label>
+                        <label htmlFor="houreEvent">จำนวนชั่วโมง</label>
                         <Form.Item
                             name="houreEvent"
                             rules={[
@@ -99,9 +113,9 @@ export default function InputEventLeader() {
                             placeholder="กรุณาเลือกสาขา"
                             value={secondAreas}
                             onChange={onSecondAreasChange}
-                            options={areas.map((area) => ({
-                              label: area,
-                              value: area,
+                            options={departData.map((depart) => ({
+                              label: depart.branch_name,
+                              value: depart.branch_name,
                             }))}
                              id="courseEvent" className="bg-gray-50 mt-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                             </Select>
@@ -117,7 +131,7 @@ export default function InputEventLeader() {
                         </Form.Item>
                     </div>
                     <div className='w-full sm:w-3/4 mt-2'>
-                        <label for="placeEvent">สถานที่จัดกิจกรรม</label>
+                        <label htmlFor="placeEvent">สถานที่จัดกิจกรรม</label>
                         <Form.Item
                             name="placeEvent"
                             rules={[
@@ -131,7 +145,7 @@ export default function InputEventLeader() {
                         </Form.Item>
                     </div>
                     <div className='w-full sm:w-1/4 mt-2'>
-                        <label for="seasonEvent">ภาคเรียนที่</label>
+                        <label htmlFor="seasonEvent">ภาคเรียนที่</label>
                         <Form.Item
                             name="seasonEvent"
                             rules={[
@@ -145,7 +159,7 @@ export default function InputEventLeader() {
                         </Form.Item>
                     </div>
                     <div className='mt-2 w-full sm:w-1/2'>
-                        <label for="startDEvent">วันที่เริ่มกิจกรรม</label>
+                        <label htmlFor="startDEvent">วันที่เริ่มกิจกรรม</label>
                         <Form.Item
                             name="startDEvent"
                             rules={[
@@ -159,7 +173,7 @@ export default function InputEventLeader() {
                         </Form.Item>
                     </div>
                     <div className='mt-2 w-full sm:w-1/2'>
-                        <label for="endDEvent">วันที่สิ้นสุดกิจกรรม</label>
+                        <label htmlFor="endDEvent">วันที่สิ้นสุดกิจกรรม</label>
                         <Form.Item
                             name="endDEvent"
                             rules={[
@@ -173,7 +187,7 @@ export default function InputEventLeader() {
                         </Form.Item>
                     </div>
                     <div className='mt-2 w-full sm:w-1/2'>
-                        <label for="startTEvent">เวลาเริ่มกิจกรรม</label>
+                        <label htmlFor="startTEvent">เวลาเริ่มกิจกรรม</label>
                         <Form.Item
                             name="startTEvent"
                             rules={[
@@ -187,7 +201,7 @@ export default function InputEventLeader() {
                         </Form.Item>
                     </div>
                     <div className='mt-2 w-full sm:w-1/2'>
-                        <label for="endTEvent">เวลาสิ้นสุดกิจกรรม</label>
+                        <label htmlFor="endTEvent">เวลาสิ้นสุดกิจกรรม</label>
                         <Form.Item
                             name="endTEvent"
                             rules={[
@@ -201,7 +215,7 @@ export default function InputEventLeader() {
                         </Form.Item>
                     </div>
                     <div className='mt-2 w-full sm:w-1/2'>
-                        <label for="endDToken">วันที่ปิดรับ token </label>
+                        <label htmlFor="endDToken">วันที่ปิดรับ token </label>
                         <Form.Item
                             name="endDToken"
                             rules={[
@@ -215,7 +229,7 @@ export default function InputEventLeader() {
                         </Form.Item>
                     </div>
                     <div className='mt-2 w-full sm:w-1/2'>
-                        <label for="endTToken">เวลาปิดรับ token </label>
+                        <label htmlFor="endTToken">เวลาปิดรับ token </label>
                         <Form.Item
                             name="endTToken"
                             rules={[
