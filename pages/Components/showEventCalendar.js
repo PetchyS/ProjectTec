@@ -32,7 +32,7 @@ export default function SEcalendar() {
                     action='#'
                 >
                     <div className='w-full sm:w-2/4 mt-2'>
-                        <label for="nameEvent">ชื่อกิจกรรม</label>
+                        <label htmlFor="nameEvent">ชื่อกิจกรรม</label>
                         <Form.Item
                             name="nameEvent"
                             rules={[
@@ -46,7 +46,7 @@ export default function SEcalendar() {
                         </Form.Item>
                     </div>
                     <div className='mt-2 w-full sm:w-1/4'>
-                        <label for="peopleEvent">จำนวนคนที่รับ</label>
+                        <label htmlFor="peopleEvent">จำนวนคนที่รับ</label>
                         <Form.Item
                             name="poepleEvent"
                             rules={[
@@ -60,7 +60,7 @@ export default function SEcalendar() {
                         </Form.Item>
                     </div>
                     <div className='mt-2 w-full sm:w-1/4'>
-                        <label for="houreEvent">จำนวนชั่วโมง</label>
+                        <label htmlFor="houreEvent">จำนวนชั่วโมง</label>
                         <Form.Item
                             name="houreEvent"
                             rules={[
@@ -131,7 +131,7 @@ export default function SEcalendar() {
                         </Form.Item>
                     </div>
                     <div className='w-full sm:w-1/4 mt-2'>
-                        <label for="seasonEvent">ภาคเรียนที่</label>
+                        <label htmlFor="seasonEvent">ภาคเรียนที่</label>
                         <Form.Item
                             name="seasonEvent"
                             rules={[
@@ -145,7 +145,7 @@ export default function SEcalendar() {
                         </Form.Item>
                     </div>
                     <div className='mt-2 w-full sm:w-1/2'>
-                        <label for="startDEvent">วันที่เริ่มกิจกรรม</label>
+                        <label htmlFor="startDEvent">วันที่เริ่มกิจกรรม</label>
                         <Form.Item
                             name="startDEvent"
                             rules={[
@@ -159,7 +159,7 @@ export default function SEcalendar() {
                         </Form.Item>
                     </div>
                     <div className='mt-2 w-full sm:w-1/2'>
-                        <label for="endDEvent">วันที่สิ้นสุดกิจกรรม</label>
+                        <label htmlFor="endDEvent">วันที่สิ้นสุดกิจกรรม</label>
                         <Form.Item
                             name="endDEvent"
                             rules={[
@@ -173,7 +173,7 @@ export default function SEcalendar() {
                         </Form.Item>
                     </div>
                     <div className='mt-2 w-full sm:w-1/2'>
-                        <label for="startTEvent">เวลาเริ่มกิจกรรม</label>
+                        <label htmlFor="startTEvent">เวลาเริ่มกิจกรรม</label>
                         <Form.Item
                             name="startTEvent"
                             rules={[
@@ -187,7 +187,7 @@ export default function SEcalendar() {
                         </Form.Item>
                     </div>
                     <div className='mt-2 w-full sm:w-1/2'>
-                        <label for="endTEvent">เวลาสิ้นสุดกิจกรรม</label>
+                        <label htmlFor="endTEvent">เวลาสิ้นสุดกิจกรรม</label>
                         <Form.Item
                             name="endTEvent"
                             rules={[
@@ -201,7 +201,7 @@ export default function SEcalendar() {
                         </Form.Item>
                     </div>
                     <div className='mt-2 w-full sm:w-1/2'>
-                        <label for="endDToken">วันที่ปิดรับ token </label>
+                        <label htmlFor="endDToken">วันที่ปิดรับ token </label>
                         <Form.Item
                             name="endDToken"
                             rules={[
@@ -215,7 +215,7 @@ export default function SEcalendar() {
                         </Form.Item>
                     </div>
                     <div className='mt-2 w-full sm:w-1/2'>
-                        <label for="endTToken">เวลาปิดรับ token </label>
+                        <label htmlFor="endTToken">เวลาปิดรับ token </label>
                         <Form.Item
                             name="endTToken"
                             rules={[

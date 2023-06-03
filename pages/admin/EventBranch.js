@@ -20,126 +20,7 @@ export default function Example1() {
       human: 50,
       tags: ['สาขา', 'อุตสาหกรรมศิลป์'],
     },
-    {
-      key: '2',
-      id_event: "SC65002202",
-      name_event: 'ออกกำลังกาย',
-      houre_event: 3,
-      human: 300,
-      tags: ['คณะ']
-    },
-    {
-      key: '1',
-      id_event: "SC65002201",
-      name_event: 'ธรรมะฮีลใจ',
-      houre_event: 3,
-      human: 50,
-      tags: ['สาขา', 'อุตสาหกรรมศิลป์'],
-    },
-    {
-      key: '2',
-      id_event: "SC65002202",
-      name_event: 'ออกกำลังกาย',
-      houre_event: 3,
-      human: 300,
-      tags: ['คณะ'],
-    },
-    {
-      key: '1',
-      id_event: "SG65002201",
-      name_event: 'ธรรมะฮีลใจ',
-      houre_event: 3,
-      human: 50,
-      tags: ['สาขา', 'วิศวกรรมไฟฟ้าและอิเล็กทรอนิกส์'],
-    },
-    {
-      key: '2',
-      id_event: "SC65002202",
-      name_event: 'ออกกำลังกาย',
-      houre_event: 3,
-      human: 300,
-      tags: ['คณะ'],
-    },
-    {
-      key: '1',
-      id_event: "SC65002201",
-      name_event: 'ธรรมะฮีลใจ',
-      houre_event: 3,
-      human: 50,
-      tags: ['สาขา', 'อุตสาหกรรมศิลป์'],
-    },
-    {
-      key: '2',
-      id_event: "SC65002202",
-      name_event: 'ออกกำลังกาย',
-      houre_event: 3,
-      human: 300,
-      tags: ['คณะ'],
-    },
-    {
-      key: '1',
-      id_event: "SC65002201",
-      name_event: 'ธรรมะฮีลใจ',
-      houre_event: 3,
-      human: 50,
-      tags: ['สาขา', 'อุตสาหกรรมศิลป์'],
-    },
-    {
-      key: '2',
-      id_event: "SC65002202",
-      name_event: 'ออกกำลังกาย',
-      houre_event: 3,
-      human: 300,
-      tags: ['คณะ'],
-    },
-    {
-      key: '1',
-      id_event: "SC65002201",
-      name_event: 'ธรรมะฮีลใจ',
-      houre_event: 3,
-      human: 50,
-      tags: ['สาขา', 'อุตสาหกรรมศิลป์'],
-    },
-    {
-      key: '2',
-      id_event: "SC65002202",
-      name_event: 'ออกกำลังกาย',
-      houre_event: 3,
-      human: 300,
-      tags: ['คณะ'],
-    },
-    {
-      key: '1',
-      id_event: "SC65002201",
-      name_event: 'ธรรมะฮีลใจ',
-      houre_event: 3,
-      human: 50,
-      tags: ['สาขา', 'อุตสาหกรรมศิลป์'],
-    },
-    {
-      key: '2',
-      id_event: "SC65002202",
-      name_event: 'ออกกำลังกาย',
-      houre_event: 3,
-      human: 300,
-      tags: ['คณะ'],
-    },
-    {
-      key: '1',
-      id_event: "SC65002201",
-      name_event: 'ธรรมะฮีลใจ',
-      houre_event: 3,
-      human: 50,
-      tags: ['สาขา', 'อุตสาหกรรมศิลป์'],
-    },
-    {
-      key: '2',
-      id_event: "SC65002202",
-      name_event: 'ออกกำลังกาย',
-      houre_event: 3,
-      human: 300,
-      tags: ['คณะ'],
-    },
+    
 
   ];
   const App = () => {
@@ -374,27 +255,27 @@ export default function Example1() {
 
             <dl className="grid lg:gap-40 lg:gap-x-96 lg:ml-14 gap-y-2 grid-cols-2 lg:pt-2">
             <div className="lg:ml-24 ">
-                <button type="button" onClick={showAdd} class="transition ease-in-out delay-150 hover:text-white text-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 shadow-lg shadow-blue-300/50 bg-white font-medium rounded-full text-lg px-7 py-7 ml-5 sm:ml-20 md:ml-52 mb-2 lg:w-auto ">
+                <button type="button" onClick={showAdd} className="transition ease-in-out delay-150 hover:text-white text-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 shadow-lg shadow-blue-300/50 bg-white font-medium rounded-full text-lg px-7 py-7 ml-5 sm:ml-20 md:ml-52 mb-2 lg:w-auto ">
                   <svg className='w-12 h-12' fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path d="M6 3a3 3 0 00-3 3v2.25a3 3 0 003 3h2.25a3 3 0 003-3V6a3 3 0 00-3-3H6zM15.75 3a3 3 0 00-3 3v2.25a3 3 0 003 3H18a3 3 0 003-3V6a3 3 0 00-3-3h-2.25zM6 12.75a3 3 0 00-3 3V18a3 3 0 003 3h2.25a3 3 0 003-3v-2.25a3 3 0 00-3-3H6zM17.625 13.5a.75.75 0 00-1.5 0v2.625H13.5a.75.75 0 000 1.5h2.625v2.625a.75.75 0 001.5 0v-2.625h2.625a.75.75 0 000-1.5h-2.625V13.5z"></path>
                   </svg>
                 </button>
               <div className='ml-2 sm:ml-16 md:ml-48 lg:ml-48 w-32'>
-                <div class='title flex justify-center text-md'> Add&nbsp;Event</div>
-                <p class='flex justify-center opacity-80 text-sm'> เพิ่มกิจกรรม</p>
+                <div className='title flex justify-center text-md'> Add&nbsp;Event</div>
+                <p className='flex justify-center opacity-80 text-sm'> เพิ่มกิจกรรม</p>
               </div>
             </div>
 
             <div className="lg:ml-20">
-                <button onClick={showCalendar} type="button" class="transition ease-in-out delay-150 hover:text-white text-red-500 hover:-translate-y-1 hover:scale-110 hover:bg-red-600 duration-300 shadow-lg shadow-red-300/50 gb-white font-medium rounded-full text-lg px-7 py-7 ml-7 mb-2">
+                <button onClick={showCalendar} type="button" className="transition ease-in-out delay-150 hover:text-white text-red-500 hover:-translate-y-1 hover:scale-110 hover:bg-red-600 duration-300 shadow-lg shadow-red-300/50 gb-white font-medium rounded-full text-lg px-7 py-7 ml-7 mb-2">
                   <svg className=' w-12 h-12' fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path d="M12.75 12.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM7.5 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM8.25 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM9.75 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM10.5 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM12.75 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM14.25 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM15 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM16.5 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM15 12.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM16.5 13.5a.75.75 0 100-1.5.75.75 0 000 1.5z"></path>
-                    <path clip-rule="evenodd" fill-rule="evenodd" d="M6.75 2.25A.75.75 0 017.5 3v1.5h9V3A.75.75 0 0118 3v1.5h.75a3 3 0 013 3v11.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V7.5a3 3 0 013-3H6V3a.75.75 0 01.75-.75zm13.5 9a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5z"></path>
+                    <path clipRule="evenodd" fillRule="evenodd" d="M6.75 2.25A.75.75 0 017.5 3v1.5h9V3A.75.75 0 0118 3v1.5h.75a3 3 0 013 3v11.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V7.5a3 3 0 013-3H6V3a.75.75 0 01.75-.75zm13.5 9a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5z"></path>
                   </svg>
                 </button>
               <div className=' mr-60 w-40'>
-                <div class='title flex justify-center text-md'>Calendar</div>
-                <p class='flex text-sm justify-center opacity-80'>ดูรายละเอียดกิจกรรม</p>
+                <div className='title flex justify-center text-md'>Calendar</div>
+                <p className='flex text-sm justify-center opacity-80'>ดูรายละเอียดกิจกรรม</p>
               </div>
             </div>
             </dl>
@@ -410,7 +291,7 @@ export default function Example1() {
           </div>
           <div className=' lg:w-1/3 w-full '>
             <Form.Item >
-              <select id="subject" class="bg-white border tracking-wider border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-slate-400 focus:border-blue-100 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              <select id="subject" className="bg-white border tracking-wider border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-slate-400 focus:border-blue-100 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 <option value="">ทั้งหมด</option>
                 <option value="">คณะ</option>
                 <option value="">สาขาทั้งหมด</option>
@@ -427,7 +308,7 @@ export default function Example1() {
           </div>
           <div className='w-full lg:w-1/6 '>
             <Form.Item>
-              <select id="YearS" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-slate-400 focus:border-blue-100  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              <select id="YearS" className="bg-white border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-slate-400 focus:border-blue-100  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 <option value="">ทั้งหมด</option>
                 <option value="">2566</option>
                 <option value="">2565</option>
@@ -439,7 +320,7 @@ export default function Example1() {
           </div>
           <div className='w-full lg:w-1/6'>
             <Form.Item>
-              <select id="Path" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-slate-400 focus:border-blue-100 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              <select id="Path" className="bg-white border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-slate-400 focus:border-blue-100 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 <option value="">ทั้งหมด</option>
                 <option value="">ภาคเรียนที่ 1</option>
                 <option value="">ภาคเรียนที่ 2</option>
@@ -447,9 +328,9 @@ export default function Example1() {
             </Form.Item>
           </div>
           <div className='w-full text-end lg:items-center my-5 lg:my-0 lg:w-1/12'>
-            <button type="button" class="hover:translate-1 hover:scale-110 duration-300 text-rose-600 hover:bg-rose-700 shadow bg-orange-50 hover:text-white font-medium rounded-lg text-sm px-9 py-2.5 text-center inline-flex items-center mr-2">
+            <button type="button" className="hover:translate-1 hover:scale-110 duration-300 text-rose-600 hover:bg-rose-700 shadow bg-orange-50 hover:text-white font-medium rounded-lg text-sm px-9 py-2.5 text-center inline-flex items-center mr-2">
               <svg style={{ height: "15" }} fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path clip-rule="evenodd" fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z"></path></svg>
+                <path clipRule="evenodd" fillRule="evenodd" d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z"></path></svg>
               &nbsp;&nbsp;ค้นหา
             </button>
           </div></Form>
