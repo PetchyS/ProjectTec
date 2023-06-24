@@ -4,7 +4,7 @@ import Table1 from '../Components/Table1';
 import ComplexNavbar from '../Components/newNav';
 
 
-export default function () {
+export default function ListName() {
   const iconSize = "large"
   return (
     <div>

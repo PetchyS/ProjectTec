@@ -40,7 +40,7 @@ export default function register() {
                         </div>
 
                         <div className=" ">
-                        <a href='../loginAdmin#'>
+                        <a href='./loginAdmin#'>
                             <button type="button" class="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 shadow-lg shadow-blue-300/50 text-white font-medium rounded-lg text-lg px-14 py-12 mr-2 mb-2">
                                 <svg className='text-while' style={{ width:80, heigh:80}} fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path clip-rule="evenodd" fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"></path>

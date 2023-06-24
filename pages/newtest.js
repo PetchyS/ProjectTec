@@ -6,7 +6,7 @@ import InputEvent from './Components/InputEvent';
 import App1 from './Components/showCalendar';
 
 
-export default function myEvent() {
+export default function MyEvent() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [setIsModalCalendar, setIsCalendarOpen] = useState(false);
     const [setIsModaladd, setIsAddOpen] = useState(false);
@@ -309,6 +309,7 @@ export default function myEvent() {
                 onCancel={onCancel}
                 footer={[
                     <button
+                        key={InputEvent}
                         type="primary"
                         onClick={onCancel}
                         className="text-white bg-green-600 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-8 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
@@ -343,6 +344,7 @@ export default function myEvent() {
                 onCancel={cancelAdd}
                 footer={[
                     <button
+                        key={InputEvent}
                         type="primary"
                         onClick={cancelAdd}
                         className="text-white bg-green-600 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-8 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"

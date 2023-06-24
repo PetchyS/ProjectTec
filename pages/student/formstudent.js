@@ -32,10 +32,7 @@ export default function InputEvent() {
                                     name="district"
                                     rules={[{ required: true, message: 'กรุณาเลือกอำเภอ' }]}
                                 >
-                                    <select id="district" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                        <option selected className=' text-gray-500' >กรุณาเลือก</option>
-                                        <option value="วังสะพุง">วังสะพุง</option>
-                                    </select>
+                                    <Input className="bg-white border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
                                 </Form.Item>
 
                             </div>
@@ -46,10 +43,7 @@ export default function InputEvent() {
                                     name="province"
                                     rules={[{ required: true, message: 'กรุณาเลือกจังหวัด' }]}
                                 >
-                                    <select placeholder='hi' id="province" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                        <option selected>กรุณาเลือก</option>
-                                        <option value="เลย">เลย</option>
-                                    </select>
+                                    <Input className="bg-white border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
                                 </Form.Item>
                             </div>
 
