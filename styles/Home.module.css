@@ -150,3 +150,6 @@
 .notes-month section {
   font-size: 28px;
 }
+.border-b-1 {
+  border-bottom-width: 1px;
+}
