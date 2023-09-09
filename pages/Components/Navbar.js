@@ -51,7 +51,7 @@ export default function Example() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <Link href="../Buffet#" className="flex items-center">
+        <Link href="../B     uffet#" className="flex items-center">
           บุฟเฟต์
         </Link>
       </Typography>

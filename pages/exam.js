@@ -30,7 +30,9 @@ export default function userMag() {
                                         <Image src='/7.jpg' alt='f' />
                                         <Image src='/8.jpg' alt='f' />
                                     </div>
-                                    <Image className="col-span-2" src='/10.jpg' alt='f' />
+                                    <div className="col-span-2" >
+                                    <Image src='/10.jpg' alt='f' />
+                                    </div>
                                 </div>
                                 <Image className='w-10/12' src='/12.jpg' alt='f' />
                                 <Image className='w-10/12' src='/13.jpg' alt='f' />
@@ -49,7 +51,9 @@ export default function userMag() {
                                         <Image src='/30.jpg' alt='f'/>
                                         <Image src='/25.jpg' alt='f'/>
                                     </div>
-                                    <Image className="col-span-2" src='/11.jpg' alt='f'/>
+                                    <div className="col-span-2">
+                                    <Image  src='/11.jpg' alt='f'/>
+                                    </div>
                                 </div>
                                 <Image src='/19.jpg' alt='f'/>
                                 <Image src='/5.jpg' alt='f'/>

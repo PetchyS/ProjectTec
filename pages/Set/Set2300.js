@@ -16,7 +16,7 @@ export default function Set2300() {
                     โต๊ะจีนราคา2300
                 </div>
                 <div className=' mt-4 text-center' >
-                    <Card className='lg:px-20 bg-red-800 rounded-3xl mx-1'>
+                    <div className='lg:px-20 bg-red-800 rounded-3xl mx-1'>
                         <div className='grid grid-cols-2'>
                         <div className=' my-5'>
                                 <Image
@@ -24,6 +24,7 @@ export default function Set2300() {
                                     width={750}
                                     height={650}
                                     alt="Trulli"
+                                    
 
                                 />
                                 </div>
@@ -94,7 +95,7 @@ export default function Set2300() {
                         </div>
 
 
-                    </Card>
+                    </div>
                 </div>
 
                 <div className=' mt-4 text-center' >
