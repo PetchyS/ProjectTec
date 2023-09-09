@@ -9,9 +9,7 @@
     "lint": "next lint",
     "export": "next export"
   },
-  "engines": {
-    "node": "16.x"
-  },
+
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
