@@ -227,7 +227,9 @@ export default function Buffet() {
                             <Image src='5.jpg' alt='f'/>
                             <Image src='4.jpg' alt='f'/>
                         </div>
-                        <Image className="col-span-2" src='13.jpg' alt='f'/>
+                        <div className="col-span-2">
+                        <Image  src='13.jpg' alt='f'/>
+                        </div>
                     </div>
                 </div>
 
