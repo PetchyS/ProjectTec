@@ -1,5 +1,5 @@
 import { Carousel, Card } from 'antd';
-import Example from './Components/navBar';
+import Example from './Components/Navbar1';
 import FooterTab from './Components/footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image'

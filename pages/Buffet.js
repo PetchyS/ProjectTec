@@ -1,5 +1,5 @@
 import { Checkbox, Card, Input, Image, checked } from 'antd';
-import Example from './Components/navBar.js';
+import Example from './Components/Navbar1.js';
 import FooterTab from './Components/footer.js';
 const { TextArea } = Input;
 import React from "react";

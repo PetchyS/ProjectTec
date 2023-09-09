@@ -23,7 +23,7 @@
     "**/*.ts",
     "**/*.tsx",
     "pages/demo.js",
-    "pages/Components/Navbar.js"
+    "pages/Components/Navbar1.js"
   ],
   "exclude": [
     "node_modules"

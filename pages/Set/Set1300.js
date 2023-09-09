@@ -3,7 +3,7 @@ import { Button, Form, Radio, Card, Space, Input, Divider , Image } from 'antd';
 import Link from 'next/link';
 import React from 'react';
 import FooterTab from '../Components/footer';
-import Example from '../Components/navBar';
+import Example from '../Components/Navbar1';
 //import Image from 'next/image';
 
 export default function Set1300() {

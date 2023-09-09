@@ -1,7 +1,7 @@
 import { radio } from '@material-tailwind/react';
 import { Button, Form, Radio, Card, Space, Input, Image } from 'antd';
 import Link from 'next/link';
-import Example from '../Components/navBar';
+import Example from '../Components/Navbar1';
 import FooterTab from '../Components/footer';
 import React from 'react';
 
