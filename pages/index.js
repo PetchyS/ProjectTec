@@ -38,10 +38,10 @@ export default function userMag() {
                 </div>
                 <div className=' bg-slate-500 bg-opacity-10'>
                 <div className='grid grid-cols-2 justify-items-center gap-x-10 align-middle py-4 md:py-10 max-w-5xl mx-2 md:mx-auto'>
-                    <a href='table# ' className='py-3 bg-red-700 text-center w-full border-neutral-300 rounded-sm shadow-xl'>
+                    <a href='table# ' className='py-3 bg-red-700 text-center w-full border-neutral-300 rounded-md shadow-xl'>
                         <p className='text-white text-lg md:text-2xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-150'>โต๊ะจีน</p>
                     </a>
-                    <a href='./Buffet#' className='py-3 text-center bg-amber-500 w-full border-neutral-300 rounded-sm shadow-xl'>
+                    <a href='./Buffet#' className='py-3 text-center bg-amber-500 w-full border-neutral-300 rounded-md shadow-xl'>
                         <p className='text-white text-lg md:text-2xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-150'>บุฟเฟ่ต์</p>
                     </a>
                 </div>
