@@ -1,5 +1,5 @@
 import { Checkbox, Card, Input, Image } from 'antd';
-import Example from './Components/navBar';
+import Example from './Components/Navbar1';
 import FooterTab from './Components/footer';
 const { TextArea } = Input;
 import React from "react";
@@ -30,9 +30,7 @@ export default function userMag() {
                                         <Image src='/7.jpg' alt='f' />
                                         <Image src='/8.jpg' alt='f' />
                                     </div>
-                                    <div className="col-span-2" >
-                                        <Image src='/10.jpg' alt='f' />
-                                    </div>
+                                    <Image className="col-span-2" src='/10.jpg' alt='f' />
                                 </div>
                                 <Image className='w-10/12' src='/12.jpg' alt='f' />
                                 <Image className='w-10/12' src='/13.jpg' alt='f' />
@@ -54,6 +52,7 @@ export default function userMag() {
                                     <div className="col-span-2">
                                         <Image src='/11.jpg' alt='f' />
                                     </div>
+                                    <Image className="col-span-2" src='/11.jpg' alt='f'/>
                                 </div>
                                 <Image src='/19.jpg' alt='f' />
                                 <Image src='/5.jpg' alt='f' />

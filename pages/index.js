@@ -1,5 +1,5 @@
 import { Carousel, Card } from 'antd';
-import Example from './Components/navBar';
+import Example from './Components/Navbar1';
 import FooterTab from './Components/footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image'
@@ -42,7 +42,7 @@ export default function userMag() {
                         <p className='text-white text-lg md:text-2xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-150'>โต๊ะจีน</p>
                     </a>
                     <a href='./Buffet#' className='py-3 text-center bg-amber-500 w-full border-neutral-300 rounded-sm shadow-xl'>
-                        <p className='text-white text-lg md:text-2xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-150'>บุฟเฟต์</p>
+                        <p className='text-white text-lg md:text-2xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-150'>บุฟเฟ่ต์</p>
                     </a>
                 </div>
                 <div className="grid px-5 grid-cols-3 gap-4 my-10 max-w-5xl mx-auto">

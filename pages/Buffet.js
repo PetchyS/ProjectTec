@@ -1,6 +1,6 @@
 import { Checkbox, Card, Input, Image, checked } from 'antd';
-import Example from './Components/navBar';
-import FooterTab from './Components/footer';
+import Example from './Components/Navbar1.js';
+import FooterTab from './Components/footer.js';
 const { TextArea } = Input;
 import React from "react";
 import { useState } from 'react';
@@ -227,7 +227,9 @@ export default function Buffet() {
                             <Image src='5.jpg' alt='f'/>
                             <Image src='4.jpg' alt='f'/>
                         </div>
-                        <Image className="col-span-2" src='13.jpg' alt='f'/>
+                        <div className="col-span-2">
+                        <Image  src='13.jpg' alt='f'/>
+                        </div>
                     </div>
                 </div>
 

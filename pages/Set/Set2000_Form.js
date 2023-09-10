@@ -2,7 +2,7 @@ import { radio } from '@material-tailwind/react';
 import React, { useState } from 'react';
 import { Button, Form, Radio, Card, Space, Input, Image, Divider } from 'antd';
 import Link from 'next/link';
-import Example from '../Components/navBar';
+import Example from '../Components/Navbar1';
 import FooterTab from '../Components/footer';
 
 export default function Set2000_Form() {
@@ -70,8 +70,8 @@ export default function Set2000_Form() {
         <Example className=" top-10" />
         <Form className="flex bg-bottom bg-red-800 min-h-full items-center justify-center py-12 sm:px-5 md:text-start text-center px-2">
 
-            <Card className='bg-white pt-8 w-full lg:mx-36 rounded-3xl'>
-                <div ableclassName='w-full my-3 text-red-800 md:text-white text-xl md:text-xl md:bg-red-800 md:px-8 py-2 rounded-3xl'>
+            <Card className='bg-white pt-8 w-full lg:mx-36 rounded-3xl '>
+                <div className='w-full my-3 text-red-800 md:text-white text-xl md:text-xl md:bg-red-800 md:px-8 py-2 rounded-3xl'>
                     โต๊ะจีนราคา2000
                 </div>
                 <div className=' mt-4 text-center' >
@@ -80,13 +80,13 @@ export default function Set2000_Form() {
                         <div className=' my-5'>
                                 <Image
                                     src="/16.jpg"
-                                    width={750}
+                                    width={950}
                                     height={650}
                                     alt="Trulli"
 
                                 />
                                 </div>
-                            <Card className=' bg-orange-100 my-4 '>
+                            <Card className=' bg-orange-100 my-4 xl:w-auto'>
                                 <div className='grid grid-cols-5'>
                                     <p className=' text-start w-full my-3 text-red-800 text-lg col-span-full'>
                                         รายการอาหาร
@@ -209,6 +209,11 @@ export default function Set2000_Form() {
                 <div className=' mt-4 text-center' >
                     <Card className='lg:px-20 bg-red-800  rounded-3xl mx-1'>
                         <div className='grid grid-cols-2'>
+                        <Image
+                                    height={600}
+                                    width={500}
+                                    alt='f'
+                                    src="/12.jpg" />
                             <Card className=' bg-orange-100'>
                                 <div className='grid grid-cols-6'>
                                     <p className=' text-start w-full my-3 text-red-800 text-lg col-span-full'>
@@ -241,7 +246,7 @@ export default function Set2000_Form() {
                                         คน                
                                     </p>
                                     <p className=' text-start w-full my-2 text-red-800 text-base pb-3 col-span-3' >
-                                        จำนวนคน                
+                                        มัดจำ                
                                     </p>
                                     <p className=' text-start w-full my-2 text-red-800 text-base pb-3 col-span-2' >
                                         3,000              
@@ -260,11 +265,7 @@ export default function Set2000_Form() {
                                 </div>
 
                             </Card>
-                            <Image
-                                    height={600}
-                                    width={500}
-                                    alt='f'
-                                    src="/12.jpg" />
+                            
                         </div>
 
 

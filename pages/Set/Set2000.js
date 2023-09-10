@@ -1,7 +1,7 @@
 import { radio } from '@material-tailwind/react';
 import { Button, Form, Radio, Card, Space, Input, Image } from 'antd';
 import Link from 'next/link';
-import Example from '../Components/navBar';
+import Example from '../Components/Navbar1';
 import FooterTab from '../Components/footer';
 import React from 'react';
 
@@ -18,7 +18,7 @@ export default function Set2000() {
                 <div className=' mt-4 text-center' >
                     <Card className='lg:px-20 bg-red-800 rounded-3xl mx-1'>
                         <div className='grid grid-cols-2'>
-                        <div className=' my-5'>
+                                <div className=' my-5'>
                                 <Image
                                     src="/13.jpg"
                                     width={750}
@@ -27,7 +27,7 @@ export default function Set2000() {
 
                                 />
                                 </div>
-                            <Card className=' bg-orange-100 my-4 '>
+                            <Card className=' bg-orange-100 my-4  xl:w-auto'>
                                 <div className='grid grid-cols-5'>
                                     <p className=' text-start w-full my-3 text-red-800 text-lg col-span-full'>
                                         รายการอาหาร
@@ -99,9 +99,15 @@ export default function Set2000() {
 
                 <div className=' mt-4 text-center' >
                     <Card className='lg:px-20 bg-red-800  rounded-3xl mx-1'>
-                        <div className='grid grid-cols-2'>
-                            <Card className=' bg-orange-100'>
+                        <div className='grid grid-cols-2 '>
+                        <Image
+                                height={600}
+                                width={700}
+                                alt='f'
+                                src="/15.jpg"/>
+                            <Card className=' bg-orange-100 xl:w-auto'>
                                 <div className='grid grid-cols-5'>
+                                    
                                     <p className=' text-start w-full my-3 text-red-800 text-lg col-span-full'>
                                         เงื่อนไข
                                     </p>
@@ -157,11 +163,7 @@ export default function Set2000() {
                                 </div>
 
                             </Card>
-                            <Image
-                                height={600}
-                                width={500}
-                                alt='f'
-                                src="/15.jpg"/>
+                            
                         </div>
 
 

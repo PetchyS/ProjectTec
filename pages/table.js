@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 
 import FooterTab from './Components/footer';
-import Example from './Components/navBar';
+import Example from './Components/Navbar1';
 
 export default function table() {
     return (
