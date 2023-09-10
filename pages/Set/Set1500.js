@@ -18,16 +18,14 @@ export default function Set1500() {
                 <div className=' mt-4 text-center' >
                     <Card className='lg:px-20 bg-red-800 rounded-3xl mx-1'>
                         <div className='grid grid-cols-2'>
-                        <div className=' my-5'>
-                                <Image
+                        <div className=' my-5 col-span-2 lg:col-span-1 self-center'>
+                                <Image className='h-fit'
                                     src="/16.jpg"
-                                    width={750}
-                                    height={650}
                                     alt="Trulli"
 
                                 />
                                 </div>
-                            <Card className=' bg-orange-100 my-4 '>
+                            <Card className=' bg-orange-100 my-4 col-span-2 lg:col-span-1'>
                                 <div className='grid grid-cols-5'>
                                     <p className=' text-start w-full my-3 text-red-800 text-lg col-span-full'>
                                         รายการอาหาร
@@ -100,7 +98,7 @@ export default function Set1500() {
                 <div className=' mt-4 text-center' >
                     <Card className='lg:px-20 bg-red-800  rounded-3xl mx-1'>
                         <div className='grid grid-cols-2'>
-                            <Card className=' bg-orange-100'>
+                            <Card className=' bg-orange-100 col-span-2 lg:col-span-1'>
                                 <div className='grid grid-cols-5'>
                                     <p className=' text-start w-full my-3 text-red-800 text-lg col-span-full'>
                                         เงื่อนไข
@@ -157,11 +155,12 @@ export default function Set1500() {
                                 </div>
 
                             </Card>
+                            <div className='col-span-2 lg:col-span-1 self-center'>
                             <Image
-                                    height={600}
-                                    width={500}
+                                    className='w-full'
                                     alt='f'
                                     src="/15.jpg" />
+                            </div>
                         </div>
 
 
