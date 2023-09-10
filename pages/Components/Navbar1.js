@@ -52,7 +52,7 @@ export default function Example() {
         className="p-1 font-normal"
       >
         <Link href="../Buffet#" className="flex items-center">
-          บุฟเฟต์
+          บุฟเฟ่ต์
         </Link>
       </Typography>
       <Typography

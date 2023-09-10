@@ -15,9 +15,9 @@ export default function FooterTab() {
                         <Image className="mx-auto w-1/3 md:w-32 -mt-5 rounded-full" src='/logoWeb.png' alt="5" width={300} height={300}/>
                     </div>
                     <div className="text-white col-span-full md:col-span-5 grid grid-cols-6 gap-y-5 md:mt-0 mt-10">
-                        <a href="./table#"className="col-span-3 md:col-span-1 text-lg md:text-xl">โต๊ะจีน</a>
-                        <a href="./Buffet#" className="col-span-3 md:col-span-1 text-lg md:text-xl">บุฟเฟต์</a>
-                        <a href="./exam" className="col-span-6 md:col-span-1 text-lg md:text-xl border-b-2 pb-10 md:pb-0 md:border-b-0">ผลงานโต๊ะจีน</a>
+                        <a href="../table#"className="col-span-3 md:col-span-1 text-lg md:text-xl">โต๊ะจีน</a>
+                        <a href="../Buffet#" className="col-span-3 md:col-span-1 text-lg md:text-xl">บุฟเฟ่ต์</a>
+                        <a href="../exam" className="col-span-6 md:col-span-1 text-lg md:text-xl border-b-2 pb-10 md:pb-0 md:border-b-0">ผลงานโต๊ะจีน</a>
                         <div className=" col-span-6 md:col-span-2 ms-5 text-start">
                             <div className="text-xl" style={{ color: '#ecac04' }}>ช่องทางการติดต่อ</div>
                             <a href="https://www.facebook.com/Krutingfood" className="w-full"><div className=" text-md mt-10 text-white"><FontAwesomeIcon icon={faSquareFacebook} bounce size="2xl" style={{ color: "#ecac04", }} /> : ครูติ้งโต๊ะจีน จ.เลย</div></a>

@@ -39,7 +39,7 @@ export default function userMag() {
                     <a href='table# ' className=' border-e-2 text-center w-full border-neutral-300'>
                         <p className='text-red-900 text-2xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-150 animate-pulse'>โต๊ะจีน</p>
                     </a>
-                    <a href='./Buffet#' className='text-red-900 text-2xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-150 animate-pulse'>บุฟเฟต์</a>
+                    <a href='./Buffet#' className='text-red-900 text-2xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-150 animate-pulse'>บุฟเฟ่ต์</a>
                 </div>
                 <div className="grid grid-cols-3 gap-4 mt-10 max-w-5xl mx-auto mb-24">
                     <Image src="/30.jpg" alt='f' width={500} height={500}/>
