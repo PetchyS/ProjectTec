@@ -18,12 +18,12 @@ export default function table() {
                         โต๊ะจีนเซ็ต
                     </a>
                     <main>
-                <div className='justify-items-center bg-left-bottom bg-gradient-to-b pb-24 bg-red-800 min-h-full'>
-                    <div className='text-center bg-gray-950 py-20 bg-opacity-20'>
+                <div className='justify-items-center bg-left-bottom rounded-2xl mt-3 px-2 bg-gradient-to-b pb-10 bg-red-800 min-h-full'>
+                    <div className='text-center py-10 '>
                         <p className='text-3xl text-white'>เลือกราคาโต๊ะจีน</p>
                         <p className=' text-slate-200'>คำนวณราคาตามจำนวนคนและรายการอาหาร</p>
                     </div>
-                    <div className='mx-auto max-w-3xl grid grid-cols-2 gap-2 lg:gap-12 my-20 container justify-items-center '>
+                    <div className='mx-auto max-w-3xl grid grid-cols-2 gap-2 lg:gap-12 my-5 container justify-items-center '>
                         <div className='text-white col-span-2 border-b w-full text-center pb-5 text-lg '></div>
                         <Link href="./Set/Set1300">
                             <Card className='w-full col-span-1 rounded-3xl ' >
